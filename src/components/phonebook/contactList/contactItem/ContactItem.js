@@ -1,12 +1,17 @@
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const Button = styled.button`
+    margin-left: 10px;
+`;
 
 const ContactItem = ({contact: {name, number, id}, removeContact}) => {
     return (
         <li>
             {name}: {number}
-            <button type="button" data-id={id} onClick={removeContact}>
+            <Button type="button" data-id={id} onClick={removeContact}>
                 Delete
-            </button>
+            </Button>
         </li>
     );
 };

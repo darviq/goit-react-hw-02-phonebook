@@ -1,5 +1,10 @@
 import ContactItem from "./contactItem/ContactItem";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const Input = styled.input`
+    display: block;
+`;
 
 const ContactList = ({state: {contacts, filter}, addFilter, removeContact}) => {
     return (
@@ -10,7 +15,7 @@ const ContactList = ({state: {contacts, filter}, addFilter, removeContact}) => {
                     <label>
                         {" "}
                         Find contacts by name
-                        <input type="text" value={filter} name="filter" onChange={addFilter} />
+                        <Input type="text" value={filter} name="filter" onChange={addFilter} />
                     </label>
                     <ul>
                         {filter.length > 0
