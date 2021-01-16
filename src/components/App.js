@@ -1,12 +1,11 @@
-import React from 'react';
+import React from "react";
+import Phonebook from "./phonebook/Phonebook";
 
 // slr - стрелочная с дефолтным экспортом
 // rafc - стрелочная с именованым экспортом
 
 const App = () => {
-    return (
-        <h1>Hello from React</h1>
-    );
-}
+    return <Phonebook />;
+};
 
 export default App;
